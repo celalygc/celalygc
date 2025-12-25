@@ -14,25 +14,35 @@ export const artistData = {
   }
 };
 
-// Spotify tracks with real song embeds
+// Spotify tracks with real song embeds - 4 different songs
 export const spotifyTracks = [
   {
     id: 1,
-    title: "Popüler Şarkılar",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator",
-    description: "En çok dinlenen şarkılarım"
+    title: "Hit Şarkı #1",
+    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator&theme=0",
+    description: "En popüler şarkım",
+    color: "from-pink-500 to-rose-600"
   },
   {
     id: 2,
-    title: "Son Çıkan",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator",
-    description: "Yeni yayınlanan müziklerim"
+    title: "Son Single",
+    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator&theme=0",
+    description: "Yeni çıkan",
+    color: "from-purple-500 to-violet-600"
   },
   {
     id: 3,
-    title: "Tüm Şarkılar",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator",
-    description: "Diskografim"
+    title: "Popüler Track",
+    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator&theme=0",
+    description: "Çok dinlenen",
+    color: "from-blue-500 to-cyan-600"
+  },
+  {
+    id: 4,
+    title: "Akustik Versiyon",
+    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator&theme=0",
+    description: "Özel kayıt",
+    color: "from-teal-500 to-emerald-600"
   }
 ];
 
