@@ -1,20 +1,70 @@
-// Mock data for musician website
+// Mock data for Celal Yağcı's musician website
 
 export const artistData = {
-  name: "Artist Name",
-  tagline: "Singer • Songwriter • Performer",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Müziğe olan tutkum çocukluğumda başladı ve bugün profesyonel bir sanatçı olarak kariyerime devam ediyorum. Her şarkımda duygularımı ve hikayelerimi paylaşıyorum.",
-  email: "contact@artistname.com",
+  name: "Celal Yağcı",
+  tagline: "Şarkıcı • Söz Yazarı • Besteci",
+  bio: "Müziğe olan tutkum çocukluğumda başladı ve bugün profesyonel bir sanatçı olarak kariyerime devam ediyorum. Her şarkımda duygularımı ve hikayelerimi paylaşıyorum. Müzik benim için sadece bir meslek değil, hayatımın ta kendisi.",
+  email: "info@celalyagci.com",
   phone: "+90 555 123 4567",
   socialMedia: {
     spotify: "https://open.spotify.com/artist/yourid",
     appleMusic: "https://music.apple.com/artist/yourid",
-    instagram: "https://instagram.com/artistname",
-    youtube: "https://youtube.com/@artistname",
-    twitter: "https://twitter.com/artistname",
-    facebook: "https://facebook.com/artistname"
+    instagram: "https://instagram.com/celalyagci",
+    youtube: "https://youtube.com/@celalyagci",
+    twitter: "https://twitter.com/celalyagci",
+    facebook: "https://facebook.com/celalyagci"
   }
 };
+
+// Spotify tracks with embed URLs
+export const spotifyTracks = [
+  {
+    id: 1,
+    title: "En Popüler Şarkı",
+    embedUrl: "https://open.spotify.com/embed/track/3n3Ppam7vgaVa1iaRUc9Lp",
+    cover: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=500&h=500&fit=crop"
+  },
+  {
+    id: 2,
+    title: "Son Single",
+    embedUrl: "https://open.spotify.com/embed/track/1301WleyT98MSxVHPZCA6M",
+    cover: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=500&fit=crop"
+  },
+  {
+    id: 3,
+    title: "Akustik Versiyon",
+    embedUrl: "https://open.spotify.com/embed/track/11dFghVXANMlKmJXsNCbNl",
+    cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&h=500&fit=crop"
+  }
+];
+
+// YouTube videos
+export const youtubeVideos = [
+  {
+    id: 1,
+    title: "Son Klip - Resmi Video",
+    videoId: "dQw4w9WgXcQ",
+    thumbnail: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=450&fit=crop"
+  },
+  {
+    id: 2,
+    title: "Canlı Performans",
+    videoId: "dQw4w9WgXcQ",
+    thumbnail: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=450&fit=crop"
+  },
+  {
+    id: 3,
+    title: "Akustik Performans",
+    videoId: "dQw4w9WgXcQ",
+    thumbnail: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=450&fit=crop"
+  },
+  {
+    id: 4,
+    title: "Behind The Scenes",
+    videoId: "dQw4w9WgXcQ",
+    thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=450&fit=crop"
+  }
+];
 
 export const albums = [
   {

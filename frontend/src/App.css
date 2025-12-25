@@ -49,6 +49,66 @@ html {
   opacity: 0;
 }
 
+/* Animated Gradient Background */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow effect */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 209, 231, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 209, 231, 0.6), 0 0 60px rgba(217, 135, 255, 0.4);
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
 /* Gradient background utilities */
 .bg-gradient-purple {
   background: linear-gradient(135deg, var(--color-mid-purple) 0%, var(--color-dark-blue) 100%);
@@ -62,7 +122,7 @@ html {
 button,
 a,
 .card {
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.3s ease;
 }
 
 button:active,
@@ -80,12 +140,12 @@ a:active {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-mid-purple);
+  background: linear-gradient(to bottom, var(--color-mid-purple), var(--color-light-pink));
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-light-pink);
+  background: linear-gradient(to bottom, var(--color-light-pink), var(--color-mid-purple));
 }
 
 /* Improved focus states for accessibility */
@@ -100,6 +160,34 @@ img {
   height: auto;
 }
 
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 209, 231, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}
+
 /* Responsive typography */
 @media (max-width: 768px) {
   h1 {
@@ -109,4 +197,14 @@ img {
   h2 {
     font-size: 2rem;
   }
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 209, 231, 0.3);
 }
