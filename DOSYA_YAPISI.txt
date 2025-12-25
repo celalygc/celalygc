@@ -1,0 +1,38 @@
+.
+├── DOSYA_YAPISI.txt
+├── INDIRME_REHBERI.md
+├── KURULUM_REHBERI.md
+├── README.md
+├── backend
+│   ├── requirements.txt
+│   └── server.py
+├── frontend
+│   ├── README.md
+│   ├── components.json
+│   ├── craco.config.js
+│   ├── jsconfig.json
+│   ├── package.json
+│   ├── plugins
+│   │   ├── health-check
+│   │   └── visual-edits
+│   ├── postcss.config.js
+│   ├── public
+│   │   └── index.html
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.js
+│   │   ├── components
+│   │   ├── hooks
+│   │   ├── index.css
+│   │   ├── index.js
+│   │   ├── lib
+│   │   ├── mock.js
+│   │   └── pages
+│   ├── tailwind.config.js
+│   └── yarn.lock
+├── test_result.md
+├── tests
+│   └── __init__.py
+└── yarn.lock
+
+13 directories, 23 files
