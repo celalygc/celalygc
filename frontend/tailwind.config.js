@@ -18,6 +18,11 @@ module.exports = {
   			'light-yellow': '#f6fd87',
   			'mid-blue': '#88a2ff',
   			'mid-pink': '#ff84e4',
+  			'neon-pink': '#ff006e',
+  			'neon-cyan': '#00f5ff',
+  			'neon-purple': '#9d4edd',
+  			'neon-orange': '#ff5400',
+  			'electric-blue': '#0066ff',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
