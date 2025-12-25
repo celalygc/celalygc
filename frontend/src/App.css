@@ -217,6 +217,14 @@ img {
   height: auto;
 }
 
+/* Hide Emergent Badge */
+#emergent-badge,
+a[href*="emergent.sh"][style*="fixed"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 /* Glass Morphism with Neon */
 .glass-neon {
   background: rgba(20, 20, 30, 0.7);
