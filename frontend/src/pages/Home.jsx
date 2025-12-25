@@ -281,40 +281,83 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Spotify Music Section */}
+      {/* Spotify Music Section - REDESIGNED */}
       <section id="music" className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-900/20 via-violet-900/20 to-cyan-900/20"></div>
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-900/30 via-violet-900/30 to-cyan-900/30"></div>
+        
+        {/* Floating Vinyl Animation */}
         <motion.div 
           className="absolute top-10 sm:top-20 right-10 sm:right-20"
-          animate={{ rotate: 360, scale: [1, 1.2, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1.2, 1],
+          }}
+          transition={{ 
+            rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+            scale: { duration: 5, repeat: Infinity, ease: "easeInOut" }
+          }}
         >
           <Sparkles size={80} className="sm:w-[120px] sm:h-[120px] text-cyan-500/20" />
         </motion.div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <AnimatedSection>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-3 sm:mb-4 text-center">
-              <AnimatedGradientText>Spotify'da Dinle</AnimatedGradientText>
-            </h2>
-            <p className="text-center text-fuchsia-300 mb-12 sm:mb-16 text-lg sm:text-xl">En popüler şarkılarımı keşfedin</p>
+            <motion.div
+              className="text-center mb-12 sm:mb-16"
+              animate={{
+                textShadow: [
+                  "0 0 20px rgba(217, 70, 239, 0.5)",
+                  "0 0 40px rgba(217, 70, 239, 0.8)",
+                  "0 0 20px rgba(217, 70, 239, 0.5)",
+                ]
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-3 sm:mb-4">
+                <AnimatedGradientText>Spotify'da Dinle</AnimatedGradientText>
+              </h2>
+              <p className="text-fuchsia-300 text-lg sm:text-xl font-semibold">🎵 En sevilen şarkılarım</p>
+            </motion.div>
           </AnimatedSection>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {/* 4 Spotify Songs Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {spotifyTracks.map((track, index) => (
               <AnimatedSection key={track.id}>
                 <motion.div
-                  whileHover={{ y: -15, scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                  className="relative group"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -20, scale: 1.05 }}
+                  className="relative group h-full"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity animate-pulse"></div>
-                  <div className="relative bg-gradient-to-br from-slate-800/90 to-fuchsia-900/80 rounded-2xl overflow-hidden backdrop-blur-sm border-2 border-fuchsia-500/50 shadow-2xl">
-                    <div className="p-4 sm:p-6">
-                      <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">
-                        <AnimatedGradientText>{track.title}</AnimatedGradientText>
-                      </h3>
-                      <p className="text-gray-400 text-xs sm:text-sm mb-4">{track.description}</p>
+                  {/* Glow Effect */}
+                  <div className={`absolute inset-0 bg-gradient-to-r ${track.color} rounded-3xl blur-2xl opacity-50 group-hover:opacity-100 transition-all duration-500 animate-pulse`}></div>
+                  
+                  {/* Card */}
+                  <div className="relative bg-gradient-to-br from-slate-800/95 to-fuchsia-900/95 rounded-3xl overflow-hidden backdrop-blur-xl border-2 border-fuchsia-500/50 shadow-2xl h-full flex flex-col">
+                    {/* Header with rotating vinyl icon */}
+                    <div className="p-6 bg-gradient-to-br from-fuchsia-600/20 to-violet-600/20 border-b border-fuchsia-500/30">
+                      <div className="flex items-center gap-3 mb-3">
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                          className={`w-10 h-10 bg-gradient-to-br ${track.color} rounded-full flex items-center justify-center shadow-lg`}
+                        >
+                          <Music size={20} className="text-white" />
+                        </motion.div>
+                        <div>
+                          <h3 className="text-xl font-bold">
+                            <AnimatedGradientText>{track.title}</AnimatedGradientText>
+                          </h3>
+                          <p className="text-gray-400 text-xs">{track.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Spotify Embed */}
+                    <div className="flex-1 p-4">
                       <iframe 
                         src={track.embedUrl}
                         width="100%" 
@@ -323,10 +366,30 @@ const Home = () => {
                         allowFullScreen="" 
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                         loading="lazy"
-                        className="rounded-xl"
+                        className="rounded-2xl shadow-xl"
                         title={track.title}
                       ></iframe>
                     </div>
+                    
+                    {/* Play Button Overlay on Hover */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none flex items-center justify-center"
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1 }}
+                    >
+                      <motion.div
+                        className={`w-16 h-16 bg-gradient-to-br ${track.color} rounded-full flex items-center justify-center shadow-2xl`}
+                        animate={{
+                          scale: [1, 1.2, 1],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                        }}
+                      >
+                        <Play size={32} className="text-white ml-1" fill="white" />
+                      </motion.div>
+                    </motion.div>
                   </div>
                 </motion.div>
               </AnimatedSection>
