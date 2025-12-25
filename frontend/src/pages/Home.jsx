@@ -625,33 +625,67 @@ const Home = () => {
               </h3>
               <p className="text-violet-300 font-semibold text-sm sm:text-base">{artistData.tagline}</p>
             </div>
+            
+            {/* Enhanced Breathing Social Media Icons */}
             <div className="flex gap-3 sm:gap-4">
               {[
-                { icon: Music, url: artistData.socialMedia.spotify, color: 'from-green-400 to-emerald-600' },
-                { icon: FaInstagram, url: artistData.socialMedia.instagram, color: 'from-fuchsia-500 to-pink-600' },
-                { icon: FaYoutube, url: artistData.socialMedia.youtube, color: 'from-red-500 to-pink-600' },
-                { icon: FaTiktok, url: artistData.socialMedia.tiktok, color: 'from-cyan-500 to-blue-600' },
+                { icon: Music, url: artistData.socialMedia.spotify, color: 'from-green-400 to-emerald-600', name: 'Spotify' },
+                { icon: FaInstagram, url: artistData.socialMedia.instagram, color: 'from-fuchsia-500 to-pink-600', name: 'Instagram' },
+                { icon: FaYoutube, url: artistData.socialMedia.youtube, color: 'from-red-500 to-pink-600', name: 'YouTube' },
+                { icon: FaTiktok, url: artistData.socialMedia.tiktok, color: 'from-cyan-500 to-blue-600', name: 'TikTok' },
               ].map((social, i) => (
                 <motion.a 
                   key={i}
                   href={social.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className={`p-3 sm:p-4 bg-gradient-to-br ${social.color} rounded-full shadow-lg`}
+                  className={`p-3 sm:p-4 bg-gradient-to-br ${social.color} rounded-full shadow-2xl relative group`}
                   animate={{
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, -5, 0],
+                    scale: [1, 1.15, 1],
+                    boxShadow: [
+                      "0 0 20px rgba(217, 70, 239, 0.3)",
+                      "0 0 40px rgba(217, 70, 239, 0.8)",
+                      "0 0 20px rgba(217, 70, 239, 0.3)",
+                    ],
                   }}
                   transition={{
-                    duration: 3,
-                    delay: i * 0.2,
+                    duration: 2,
+                    delay: i * 0.3,
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  whileHover={{ scale: 1.4, rotate: 360 }}
+                  whileHover={{ 
+                    scale: 1.5, 
+                    rotate: 360,
+                    boxShadow: "0 0 60px rgba(217, 70, 239, 1)",
+                  }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <social.icon size={20} className="sm:w-6 sm:h-6 text-white" />
+                  <social.icon size={20} className="sm:w-6 sm:h-6 text-white relative z-10" />
+                  
+                  {/* Pulsating Ring */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full border-2 border-white/50"
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.5, 0, 0.5],
+                    }}
+                    transition={{
+                      duration: 2,
+                      delay: i * 0.3,
+                      repeat: Infinity,
+                      ease: "easeOut"
+                    }}
+                  />
+                  
+                  {/* Tooltip on hover */}
+                  <motion.div
+                    className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-3 py-1 rounded-lg text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                    initial={{ opacity: 0, y: 5 }}
+                    whileHover={{ opacity: 1, y: 0 }}
+                  >
+                    {social.name}
+                  </motion.div>
                 </motion.a>
               ))}
             </div>
