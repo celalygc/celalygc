@@ -1,41 +1,38 @@
-// Updated mock data for Celal Yağcı with real links
+// Updated mock data for Celal Yağcı with real social media links
 
 export const artistData = {
   name: "Celal Yağcı",
   tagline: "Şarkıcı • Söz Yazarı • Besteci",
   bio: "Müziğe olan tutkum çocukluğumda başladı ve bugün profesyonel bir sanatçı olarak kariyerime devam ediyorum. Her şarkımda duygularımı ve hikayelerimi paylaşıyorum. Müzik benim için sadece bir meslek değil, hayatımın ta kendisi.",
   detailedBio: "2018 yılında müzik kariyerime başladım ve o günden beri dinleyicilerimle duygu dolu şarkılar paylaşıyorum. Pop ve R&B türlerinde eserler vererek, Türk müzik sahnesinde kendime özgün bir yer edinmeye çalışıyorum. Her şarkım, yaşadığım deneyimlerden ve hissettiklerimi yansıtıyor.",
-  email: "info@celalyagci.com",
-  phone: "+90 555 123 4567",
   socialMedia: {
     spotify: "https://open.spotify.com/intl-tr/artist/5jCFrXh3uTmBkL2TeueJIh",
     appleMusic: "https://music.apple.com/tr/artist/celal-ya%C4%9Fc%C4%B1/1856277822",
-    instagram: "https://instagram.com/celalyagci",
+    instagram: "https://www.instagram.com/celalygc/",
     youtube: "https://www.youtube.com/@celalyagci",
-    twitter: "https://twitter.com/celalyagci",
-    facebook: "https://facebook.com/celalyagci"
+    tiktok: "https://www.tiktok.com/@celalyagcimusic"
   }
 };
 
-// Spotify tracks with embed URLs
+// Spotify tracks with real song embeds
 export const spotifyTracks = [
   {
     id: 1,
-    title: "En Popüler Şarkı",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh",
-    cover: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=500&h=500&fit=crop"
+    title: "Popüler Şarkılar",
+    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator",
+    description: "En çok dinlenen şarkılarım"
   },
   {
     id: 2,
-    title: "Son Çıkan Single",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh",
-    cover: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=500&fit=crop"
+    title: "Son Çıkan",
+    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator",
+    description: "Yeni yayınlanan müziklerim"
   },
   {
     id: 3,
     title: "Tüm Şarkılar",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh",
-    cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&h=500&fit=crop"
+    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator",
+    description: "Diskografim"
   }
 ];
 
@@ -43,38 +40,38 @@ export const spotifyTracks = [
 export const youtubeVideos = [
   {
     id: 1,
-    title: "Yeni Klip 2024",
-    videoId: "VIDEO_ID_1",
+    title: "Son Klip",
+    videoId: "VIDEO_1",
     thumbnail: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=450&fit=crop"
   },
   {
     id: 2,
     title: "Akustik Performans",
-    videoId: "VIDEO_ID_2",
+    videoId: "VIDEO_2",
     thumbnail: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=450&fit=crop"
   },
   {
     id: 3,
     title: "Stüdyo Kayıt",
-    videoId: "VIDEO_ID_3",
+    videoId: "VIDEO_3",
     thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=450&fit=crop"
   },
   {
     id: 4,
     title: "Canlı Performans",
-    videoId: "VIDEO_ID_4",
+    videoId: "VIDEO_4",
     thumbnail: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=450&fit=crop"
   },
   {
     id: 5,
     title: "Behind The Scenes",
-    videoId: "VIDEO_ID_5",
+    videoId: "VIDEO_5",
     thumbnail: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&h=450&fit=crop"
   },
   {
     id: 6,
-    title: "Cover Performans",
-    videoId: "VIDEO_ID_6",
+    title: "Cover Şarkı",
+    videoId: "VIDEO_6",
     thumbnail: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&h=450&fit=crop"
   }
 ];
@@ -86,8 +83,7 @@ export const albums = [
     year: "2024",
     cover: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=500&h=500&fit=crop",
     spotifyUrl: "https://open.spotify.com/intl-tr/artist/5jCFrXh3uTmBkL2TeueJIh",
-    appleMusicUrl: "https://music.apple.com/tr/artist/celal-ya%C4%9Fc%C4%B1/1856277822",
-    bgColor: "light-pink"
+    appleMusicUrl: "https://music.apple.com/tr/artist/celal-ya%C4%9Fc%C4%B1/1856277822"
   },
   {
     id: 2,
@@ -95,8 +91,7 @@ export const albums = [
     year: "2023",
     cover: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=500&fit=crop",
     spotifyUrl: "https://open.spotify.com/intl-tr/artist/5jCFrXh3uTmBkL2TeueJIh",
-    appleMusicUrl: "https://music.apple.com/tr/artist/celal-ya%C4%9Fc%C4%B1/1856277822",
-    bgColor: "mid-purple"
+    appleMusicUrl: "https://music.apple.com/tr/artist/celal-ya%C4%9Fc%C4%B1/1856277822"
   },
   {
     id: 3,
@@ -104,8 +99,7 @@ export const albums = [
     year: "2022",
     cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&h=500&fit=crop",
     spotifyUrl: "https://open.spotify.com/intl-tr/artist/5jCFrXh3uTmBkL2TeueJIh",
-    appleMusicUrl: "https://music.apple.com/tr/artist/celal-ya%C4%9Fc%C4%B1/1856277822",
-    bgColor: "light-yellow"
+    appleMusicUrl: "https://music.apple.com/tr/artist/celal-ya%C4%9Fc%C4%B1/1856277822"
   }
 ];
 
@@ -115,9 +109,9 @@ export const streamingStats = [
     id: 1,
     platform: "Spotify",
     metric: "Aylık Dinleyici",
-    value: "50,000+",
+    value: "50K+",
     icon: "spotify",
-    color: "from-green-500 to-green-600"
+    color: "from-green-400 to-emerald-600"
   },
   {
     id: 2,
@@ -125,7 +119,7 @@ export const streamingStats = [
     metric: "Toplam Dinlenme",
     value: "1M+",
     icon: "apple",
-    color: "from-pink-500 to-red-600"
+    color: "from-pink-400 to-rose-600"
   },
   {
     id: 3,
@@ -133,15 +127,15 @@ export const streamingStats = [
     metric: "Video İzlenme",
     value: "500K+",
     icon: "youtube",
-    color: "from-red-500 to-pink-600"
+    color: "from-red-400 to-pink-600"
   },
   {
     id: 4,
-    platform: "Tüm Platformlar",
-    metric: "Toplam Dinlenme",
-    value: "5M+",
-    icon: "all",
-    color: "from-purple-500 to-cyan-600"
+    platform: "TikTok",
+    metric: "Takipçi",
+    value: "100K+",
+    icon: "tiktok",
+    color: "from-cyan-400 to-blue-600"
   }
 ];
 
