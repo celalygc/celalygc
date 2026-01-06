@@ -19,7 +19,7 @@ export const spotifyTracks = [
   {
     id: 1,
     title: "Hit Şarkı #1",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator&theme=0",
+    embedUrl: "https://open.spotify.com/embed/album/4XvoDxqomES4C2xA2Nq3F4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>",
     description: "En popüler şarkım",
     color: "from-pink-500 to-rose-600"
   },
