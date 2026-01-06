@@ -40,7 +40,7 @@ export const spotifyTracks = [
   {
     id: 4,
     title: "Akustik Versiyon",
-    embedUrl: "https://open.spotify.com/embed/track/6H0R3w8vBIhIdHaxesx0xX?utm_source=generator",
+    embedUrl: "https://open.spotify.com/embed/track/2OvCLoa8NbhV53bkr5e3tU?utm_source=generator",
     description: "Özel kayıt",
     color: "from-teal-500 to-emerald-600"
   }
