@@ -19,28 +19,28 @@ export const spotifyTracks = [
   {
     id: 1,
     title: "Yeni Single",
-    embedUrl: "<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0JAqIlQOZNCDu8qREjoa5j?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>",
+    embedUrl: "https://open.spotify.com/embed/album/4XvoDxqomES4C2xA2Nq3F4?utm_source=generator",
     description: "En popüler şarkım",
     color: "from-pink-500 to-rose-600"
   },
   {
     id: 2,
     title: "Son Single",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator&theme=0",
+    embedUrl: "https://open.spotify.com/embed/track/0JAqIlQOZNCDu8qREjoa5j?utm_source=generator",
     description: "Yeni çıkan",
     color: "from-purple-500 to-violet-600"
   },
   {
     id: 3,
     title: "Popüler Track",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator&theme=0",
+    embedUrl: "https://open.spotify.com/embed/track/6H0R3w8vBIhIdHaxesx0xX?utm_source=generator",
     description: "Çok dinlenen",
     color: "from-blue-500 to-cyan-600"
   },
   {
     id: 4,
     title: "Akustik Versiyon",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator&theme=0",
+    embedUrl: "https://open.spotify.com/embed/track/6H0R3w8vBIhIdHaxesx0xX?utm_source=generator",
     description: "Özel kayıt",
     color: "from-teal-500 to-emerald-600"
   }
