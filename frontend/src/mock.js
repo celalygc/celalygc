@@ -19,7 +19,7 @@ export const spotifyTracks = [
   {
     id: 1,
     title: "Yeni Single",
-    embedUrl: "https://open.spotify.com/embed/artist/5jCFrXh3uTmBkL2TeueJIh?utm_source=generator&theme=0",
+    embedUrl: "https://open.spotify.com/intl-tr/track/0JAqIlQOZNCDu8qREjoa5j?si=cf8b211928454791",
     description: "En popüler şarkım",
     color: "from-pink-500 to-rose-600"
   },
